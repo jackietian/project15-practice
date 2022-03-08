@@ -10,6 +10,12 @@ instance.interceptors.request.use(
   function (config) {
     console.log("inside request interceptor");
     // Do something before request is sent
+
+    const token = sessionStorage.getItem("token");
+    if (token) {
+      config.headers["Authorization"] = `Bearer ${token}`;
+    }
+
     return config;
   },
   function (error) {
