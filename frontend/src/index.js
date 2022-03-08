@@ -9,7 +9,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import rootReducer from "./state/reducers";
 import "./styles/index.scss";
 
-const store = createStore(
+export const store = createStore(
   rootReducer,
   composeWithDevTools(applyMiddleware(thunk))
 );

@@ -12,5 +12,5 @@
 - [x] Export csv
 - [x] Send email
 - [ ] Web socket
-- [ ] Global notification
+- [x] Global notification
 - [ ] Multiple form using redux
