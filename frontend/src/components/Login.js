@@ -32,13 +32,6 @@ const Login = () => {
     }
   };
 
-  //   useEffect(() => {
-  //     if(token !== '') {
-  //         navigate('/home')
-  //     }
-
-  //   }, [token])
-
   return (
     <form onSubmit={handleSubmit}>
       <section>
@@ -61,7 +54,7 @@ const Login = () => {
           onChange={handleChange}
         />
       </section>
-      <section>
+      <section className="actions">
         <button type="reset">Cancel</button>
         <button type="submit" disabled={loading}>
           Login

@@ -1,3 +1,5 @@
+import { setEmail, setToken, setType } from "../../services/SessionStorage";
+
 const initialState = {
   loading: false,
   currentUser: {},
@@ -24,6 +26,12 @@ const authReducer = (state = initialState, action) => {
         loading: true,
       };
     case "LOGIN_SUCCESS":
+      const email = action.data.result.email;
+      const token = action.data.token;
+      const type = action.data.result.type;
+      setEmail(email);
+      setToken(token);
+      setType(type);
       return {
         ...state,
         loading: false,

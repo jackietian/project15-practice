@@ -25,8 +25,6 @@ router.post('/', async (req, res) => {
             oldUser.password
         )
 
-        console.log(isPasswordCorrect)
-
         if (!isPasswordCorrect) {
             // return 400 with message wrong password
             return res.status(400).json({ message: 'Bad credentials' })
@@ -50,10 +48,11 @@ router.post('/', async (req, res) => {
             result: {
                 id: oldUser._id,
                 email,
+                type: oldUser.type,
             },
         })
     } catch (error) {
-        res.status(500).json({message: error.message})
+        res.status(500).json({ message: error.message })
     }
 })
 

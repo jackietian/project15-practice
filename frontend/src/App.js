@@ -5,10 +5,6 @@ import ProtectedLayout from "./components/ProtectedLayout";
 import Home from "./components/Home";
 
 function App() {
-  const { currentUser } = useSelector((state) => ({
-    currentUser: state.auth.currentUser,
-  }));
-
   return (
     <Router>
       <Routes>
