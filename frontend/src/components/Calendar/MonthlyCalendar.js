@@ -5,6 +5,7 @@ import {
   getYear,
   getCalendarDates,
   weekdays,
+  months,
 } from "../../services/dates";
 
 const MonthlyCalendar = () => {
@@ -34,7 +35,9 @@ const MonthlyCalendar = () => {
 
   return (
     <>
-      <h1>MonthlyCalendar</h1>
+      <h1>
+        MonthlyCalendar - {months[month]} {year}
+      </h1>
       <section>
         <ul className="row">
           <li>
