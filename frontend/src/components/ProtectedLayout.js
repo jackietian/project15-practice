@@ -35,6 +35,9 @@ const ProtectedLayout = () => {
           <li>
             <NavLink to="/form">Form</NavLink>
           </li>
+          <li>
+            <NavLink to="/calendar">Calendar</NavLink>
+          </li>
           <li onClick={logout}>Logout</li>
         </nav>
       </header>

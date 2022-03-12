@@ -1,4 +1,9 @@
 ul {
+  &.row {
+    display: flex;
+    flex-direction: row;
+  }
+
   &.list--notificaitons {
     position: fixed;
     right: 1rem;
@@ -10,6 +15,39 @@ ul {
       font-size: 0.8rem;
       background-color: red;
       color: #fff;
+    }
+  }
+
+  &.list-weekdays {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    flex-wrap: nowrap;
+
+    li {
+      flex-grow: 1;
+      width: 14%;
+      border: 1px solid #000;
+      color: #fff;
+      background-color: #000;
+    }
+  }
+
+  &.monthlyCalendar {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+    li {
+      width: 14%;
+      border: 1px solid #000;
+      border-collapse: collapse;
+      height: 10rem;
+
+      &.active {
+        background: red;
+      }
     }
   }
 }
