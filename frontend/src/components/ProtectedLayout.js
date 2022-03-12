@@ -32,6 +32,9 @@ const ProtectedLayout = () => {
           <li>
             <NavLink to="/home">home</NavLink>
           </li>
+          <li>
+            <NavLink to="/form">Form</NavLink>
+          </li>
           <li onClick={logout}>Logout</li>
         </nav>
       </header>
