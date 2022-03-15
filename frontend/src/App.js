@@ -9,6 +9,7 @@ import Step1 from "./components/Form/Step1";
 import Step2 from "./components/Form/Step2";
 import Calendar from "./components/Calendar/Calendar";
 import MonthlyCalendar from "./components/Calendar/MonthlyCalendar";
+import WeeklyCalendar from "./components/Calendar/Weekly";
 
 function App() {
   return (
@@ -24,6 +25,7 @@ function App() {
             </Route>
             <Route path="calendar" element={<Calendar />}>
               <Route index element={<MonthlyCalendar />} />
+              <Route path="weekly" element={<WeeklyCalendar />} />
             </Route>
           </Route>
           <Route path="*" element={<h1>Path not found</h1>} />
